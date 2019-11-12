@@ -1,0 +1,19 @@
+<div class="header"></div>
+
+<div class="container">
+  <div class="title-actions">
+    <h1><%= @article.title %></h1>
+    <div class="actions">
+      <%= link_to edit_article_path(@article) , class: "ml-3 btn-action" do %>
+      <%= fa_icon "pencil" %>
+      <% end %>
+      <%= link_to article_path(@article), method: :delete, class: "btn-action ml-3 red" do %>
+      <%= fa_icon "trash" %>
+      <% end %>
+      <%= link_to articles_path, class: "btn-action ml-3 grey" do %>
+      <%= fa_icon "arrow-left" %>
+      <% end %>
+    </div>
+  </div>
+  <h2><%= @article.content %></h2>
+</div>

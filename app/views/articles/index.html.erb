@@ -1,0 +1,12 @@
+<div class="header"></div>
+
+<div class="container">
+  <%= link_to "Create", new_article_path, class: 'btn btn-primary float-right' %>
+  <% @articles.each do |article| %>
+  <li>
+    <h1><%= link_to article.title, article_path(article), class: 'title' %></h1>
+    <h2><%= article.content[0..100] + "..." %></h2>
+  </li>
+  <% end %>
+</div>
+
